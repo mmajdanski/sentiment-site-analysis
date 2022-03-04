@@ -1,6 +1,5 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import { positive_words, negative_words } from "./word_data.js";
 import { useEffect, useRef } from "react";
 import {
   PieChart,
@@ -13,9 +12,6 @@ import {
 
 const axios = require("axios");
 
-import { GetStaticProps } from "next";
-
-import styles from "../styles/Home.module.css";
 import { useState } from "react";
 
 const data01 = [
