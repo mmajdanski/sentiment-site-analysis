@@ -15,6 +15,7 @@ const axiosConfig = {
     "Access-Control-Allow-Headers":
       "Origin, X-Requested-With, Content-Type, Accept",
   },
+  crossDomain: true,
 };
 
 type WordObj = {
