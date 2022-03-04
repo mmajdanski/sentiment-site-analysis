@@ -1,6 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from "next";
-import { positive_words, negative_words } from "../word_data.js";
+import { positive_words, negative_words } from "../../public/word_data.js";
 const axios = require("axios");
 const jsdom = require("jsdom");
 
