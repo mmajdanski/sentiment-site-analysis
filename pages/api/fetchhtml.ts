@@ -6,18 +6,6 @@ const jsdom = require("jsdom");
 
 const { JSDOM } = jsdom;
 
-const axiosConfig = {
-  withCredentials: true,
-  headers: {
-    Accept: "application/json",
-    "Content-Type": "application/json",
-    "Access-Control-Allow-Origin": "*",
-    "Access-Control-Allow-Headers":
-      "Origin, X-Requested-With, Content-Type, Accept",
-  },
-  crossDomain: true,
-};
-
 type WordObj = {
   word: string;
   count: number;
@@ -41,7 +29,7 @@ export default async function handler(
   try {
     console.log("HERE IS THE REQUESTING URL");
     console.log(req.body.requesting_url);
-    let response_data = await axios.get(req.body.requesting_url, axiosConfig);
+    let response_data = await axios.get(req.body.requesting_url);
     console.log("trying to log the response DATA:", response_data);
     dom = new JSDOM(response_data.data);
     console.log("trying to use the JSDOM library to read the data");
