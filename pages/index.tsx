@@ -51,7 +51,7 @@ const COLORS = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042"];
 const Home: NextPage = () => {
   const handleButton = async (requestingUrl: string) => {
     await axios
-      .post(`${window.location}/api/fetchhtml`, {
+      .post(`${window.location}api/fetchhtml`, {
         requesting_url: requestingUrl,
       })
       .then(function (response: any) {
